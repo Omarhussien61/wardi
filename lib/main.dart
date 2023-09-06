@@ -32,6 +32,7 @@ class _MyAppState extends State<MyApp> {
       ],
       locale: const Locale('ar'),
       home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
