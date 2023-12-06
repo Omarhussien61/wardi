@@ -133,7 +133,7 @@ class MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => WebViewScreen(url: url,)));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => WebViewExample(url: url,)));
       },
       child: Container(
           padding: const EdgeInsets.only(
