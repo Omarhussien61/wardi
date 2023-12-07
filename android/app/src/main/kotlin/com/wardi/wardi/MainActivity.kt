@@ -1,4 +1,4 @@
-package com.wardi.wardi
+package com.wardi.bestgator
 
 import io.flutter.embedding.android.FlutterActivity
 
