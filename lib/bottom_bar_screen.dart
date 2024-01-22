@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:wardi/menu.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
@@ -97,6 +96,16 @@ Page resource error:
           },
           onUrlChange: (UrlChange change) {
             debugPrint('url change to ${change.url}');
+            if(change.url!.contains("OnlinestoreWardi")||change.url!.contains("wardistoreonline")){
+              _controller.goBack();
+              launch(change.url??'').then((value) {
+                _controller.goBack();
+                _controller.loadRequest(Uri.parse(webViewList[selectedIndex]));
+              });
+
+
+              // await FlutterOpenWhatsapp.sendSingleMessage("+966543504864", "Hello");
+            }
           },
         ),
       )
